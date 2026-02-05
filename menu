@@ -1,0 +1,33 @@
+#include "Funciones.h"
+#include "Usuarios.h"
+
+int main() {
+
+    int opcion;
+
+    do {
+        printf("\n*    Bienvenido al sistema de gesti%cn de la Agencia de viajes CUCEI    *\n\n", 162);
+        printf("\nUsted es:\n");
+        printf("1. Cliente\n");
+        printf("2. Trabajador\n");
+        printf("3. Salir\n");
+        printf("\nSeleccione una opci%cn: ", 162);
+        scanf("%d", &opcion);
+
+        switch (opcion) {
+            case 1:
+                cliente();
+                break;
+            case 2:
+                trabajador();
+                break;
+            case 3:
+                printf("\nSalio del programa\n");
+                break;
+            default:
+                printf("\nOpci%cn no valida, vuelva a intentar\n", 162);
+        }
+    } while (opcion != 3);
+
+    return 0;
+}
